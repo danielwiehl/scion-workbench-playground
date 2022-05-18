@@ -1,1 +1,7 @@
-<wb-workbench></wb-workbench>
+<wb-workbench>
+  <ng-template wbViewPartAction *ngIf="(viewCount$ | async)! > 0">
+    <button [wbRouterLink]="'/desktop'" class="material-icons" [wbRouterLinkExtras]="{activateIfPresent: false}">
+      add
+    </button>
+  </ng-template>
+</wb-workbench>

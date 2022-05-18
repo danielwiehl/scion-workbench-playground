@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {WorkbenchService} from '@scion/workbench';
+import {map, Observable} from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,4 +8,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  public viewCount$: Observable<number>;
+
+  constructor(workbench: WorkbenchService) {
+    this.viewCount$ = workbench.views$.pipe(map(views => views.length));
+  }
 }
