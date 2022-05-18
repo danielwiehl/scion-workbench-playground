@@ -1,0 +1,8 @@
+<h2>Products</h2>
+
+<ul>
+  <li *ngFor="let product of productService.products">
+    <a [wbRouterLink]="['/products', product.id]" [wbRouterLinkExtras]="{target: 'blank'}">{{product.name}}</a>
+    CHF {{product.price | number:'0.2'}}
+  </li>
+</ul>

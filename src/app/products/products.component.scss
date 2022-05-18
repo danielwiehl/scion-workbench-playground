@@ -1,0 +1,17 @@
+:host {
+  padding: 1em;
+
+  > ul > li {
+    padding: .25em;
+
+    > a {
+      text-decoration: none;
+      width: 125px;
+      display: inline-block;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
