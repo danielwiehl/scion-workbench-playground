@@ -7,6 +7,8 @@ import {DesktopComponent} from './desktop/desktop.component';
 import {ProductsComponent} from './products/products.component';
 import {ProductComponent} from './product/product.component';
 import {RouterModule, Routes} from '@angular/router';
+import {CustomersComponent} from './customers/customers.component';
+import {CustomerComponent} from './customer/customer.component';
 import {ProductsPipe} from './products.pipe';
 
 const routes: Routes = [
@@ -18,6 +20,12 @@ const routes: Routes = [
       {path: ':id', component: ProductComponent},
     ],
   },
+  {
+    path: 'customers', children: [
+      {path: '', component: CustomersComponent},
+      {path: ':id', component: CustomerComponent},
+    ],
+  },
 ];
 
 @NgModule({
@@ -27,6 +35,8 @@ const routes: Routes = [
     ProductsComponent,
     ProductComponent,
     ProductsPipe,
+    CustomersComponent,
+    CustomerComponent,
   ],
   imports: [
     BrowserModule,

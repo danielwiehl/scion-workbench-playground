@@ -1,0 +1,15 @@
+<span>ID:</span><span>{{ customer.id}}</span>
+<span>Firstname:</span><span>{{ customer.firstname}}</span>
+<span>Lastname:</span><span>{{ customer.lastname}}</span>
+<span>Street:</span><span>{{ customer.street}}</span>
+<span>City:</span><span>{{ customer.city}}</span>
+<span>Phone:</span><span>{{ customer.phone}}</span>
+<span>Email:</span><span>{{ customer.email}}</span>
+
+<h4>Products</h4>
+<ul>
+  <li *ngFor="let product of customer.products | appProducts">
+    <a [wbRouterLink]="['/', 'products', product.id]" [wbRouterLinkExtras]="{target: 'blank'}">{{product.name}}</a>
+    CHF {{product.price | number:'0.2'}}
+  </li>
+</ul>
