@@ -1,0 +1,28 @@
+:host {
+  padding: 1em;
+
+  > ul {
+    display: flex;
+    gap: 1em;
+
+    > li.tile {
+      padding: 2em;
+      border: 1px solid black;
+      background-color: lightgray;
+      align-items: center;
+      display: flex;
+      gap: 1em;
+      cursor: pointer;
+
+      > span.icon {
+        flex: none;
+        width: 24px;
+      }
+
+      &:hover {
+        transform: scale(1.025);
+        transition: transform .125s ease-in-out;
+      }
+    }
+  }
+}

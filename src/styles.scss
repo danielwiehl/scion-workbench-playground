@@ -1,5 +1,21 @@
 @use '@scion/workbench';
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons|Material+Icons+Outlined');
+
 body {
   font-family: Roboto, Arial, sans-serif;
+}
+
+button.material-icons {
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+
+  > li {
+    list-style: none;
+  }
 }
